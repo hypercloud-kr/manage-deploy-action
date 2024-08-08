@@ -5,6 +5,7 @@
 
 # Node artifact files
 node_modules/
+dist/tsconfig.tsbuildinfo
 
 # Compiled Java class files
 *.class

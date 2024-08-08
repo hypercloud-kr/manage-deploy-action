@@ -1,0 +1,32 @@
+{
+  "name": "manage-deploy-action",
+  "version": "0.0.1",
+  "description": "WebXR 프로젝트 배포를 위한 하클용 GithubAction",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --noEmit --incremental && node esbuild.cjs",
+    "build:dev": "node esbuild.cjs",
+    "dev": "yarn build & node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypercloud-kr/manage-deploy-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hypercloud-kr/manage-deploy-action/issues"
+  },
+  "homepage": "https://github.com/hypercloud-kr/manage-deploy-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@notionhq/client": "^2.2.15",
+    "dayjs": "^1.11.12",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "exbuild": "^0.2.2",
+    "tsc": "^2.0.4"
+  }
+}

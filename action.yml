@@ -1,0 +1,25 @@
+name: 'Manage Deploymeny Action'
+inputs:
+  project:
+    description: 'Project Key'
+    required: true
+  version:
+    description: 'version name'
+    required: true
+  database_id:
+    description: 'Database ID'
+    required: true
+  notion_token:
+    description: 'Notion Token'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - run: $GITHUB_ACTION_PATH/run.sh
+      shell: bash
+      env:
+        INPUT_PROJECT-KEY: ${{ inputs.project }}
+        INPUT_VERSION: ${{ inputs.version }}
+        INPUT_NOTION-DATABASE-ID: ${{ inputs.database_id }}
+        INPUT_NOTION-TOKEN: ${{ inputs.notion_token }}
